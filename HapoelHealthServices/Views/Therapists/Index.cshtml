@@ -1,0 +1,93 @@
+﻿@model IEnumerable<HapoelHealthServices.Models.Therapist>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+        <br /><br />
+    <a href="~/Therapists/TherapistSearch">Therapist Search</a>
+</p>
+<table>
+
+    <tr>
+        <th>
+            Therapist ID
+        </th>
+        <th></th>
+        <th>
+            First Name
+        </th>
+        <th></th>
+        <th>
+            Last Name
+        </th>
+        <th></th>
+        <th>
+           Specialization
+        </th>
+        <th></th>
+        <th>
+            Password
+        </th>
+        <th></th>
+
+        <th>
+            Birth date
+        </th>
+        <th></th>
+        <th>
+            Address
+        </th>
+        <th></th>
+        <th>
+            Phone
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f_name)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.l_name)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.specialization)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td></td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.birth_date)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.address)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td></td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

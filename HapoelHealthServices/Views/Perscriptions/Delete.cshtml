@@ -1,0 +1,67 @@
+﻿@model HapoelHealthServices.Models.Perscription
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Perscription</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Patients.f_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Patients.f_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Therapists.f_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Therapists.f_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Drugs.drug_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Drugs.drug_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.expiration_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.expiration_date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dosage)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dosage)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.was_printed)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.was_printed)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

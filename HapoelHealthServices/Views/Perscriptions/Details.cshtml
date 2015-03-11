@@ -1,0 +1,64 @@
+﻿@model HapoelHealthServices.Models.Perscription
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Perscription</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Patients.f_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Patients.f_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Therapists.f_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Therapists.f_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Drugs.drug_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Drugs.drug_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.expiration_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.expiration_date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dosage)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dosage)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.was_printed)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.was_printed)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.perID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

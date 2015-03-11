@@ -1,0 +1,85 @@
+﻿@model HapoelHealthServices.Models.Perscription
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Perscription</legend>
+
+        @Html.HiddenFor(model => model.perID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.patientID, "Patients")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("patientID", String.Empty)
+            @Html.ValidationMessageFor(model => model.patientID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.therapistID, "Therapists")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("therapistID", String.Empty)
+            @Html.ValidationMessageFor(model => model.therapistID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.drug_ID, "Drugs")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("drug_ID", String.Empty)
+            @Html.ValidationMessageFor(model => model.drug_ID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.date)
+            @Html.ValidationMessageFor(model => model.date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.expiration_date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.expiration_date)
+            @Html.ValidationMessageFor(model => model.expiration_date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.dosage)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dosage)
+            @Html.ValidationMessageFor(model => model.dosage)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.was_printed)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.was_printed)
+            @Html.ValidationMessageFor(model => model.was_printed)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

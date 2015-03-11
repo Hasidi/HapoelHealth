@@ -1,0 +1,80 @@
+﻿@model IEnumerable<HapoelHealthServices.Models.Perscription>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            PatientID
+        </th>
+        <th></th>
+        <th>
+            DoctorID
+        </th>
+        <th></th>
+        <th>
+            DrugName
+        </th>
+        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.expiration_date)
+        </th>
+        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.dosage)
+        </th>
+        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.was_printed)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patients.ID)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Therapists.ID)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Drugs.drug_name)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.expiration_date)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dosage)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.was_printed)
+        </td>
+        <td></td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.perID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,86 @@
+﻿@model IEnumerable<HapoelHealthServices.Models.Patient>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.insurance_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.payerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_mikur_hutz)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.l_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.birth_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.insurance_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.payerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.is_mikur_hutz)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.l_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.birth_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

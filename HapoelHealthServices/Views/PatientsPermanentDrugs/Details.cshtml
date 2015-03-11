@@ -1,0 +1,29 @@
+﻿@model HapoelHealthServices.Models.PatientPermanentDrugs
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>PatientPermanentDrugs</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.start_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.start_date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.end_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.end_date)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

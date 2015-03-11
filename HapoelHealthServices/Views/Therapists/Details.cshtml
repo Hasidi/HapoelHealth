@@ -1,0 +1,72 @@
+﻿@model HapoelHealthServices.Models.Therapist
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Therapist</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID)
+    </div>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.f_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.f_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.l_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.l_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.specialization)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.specialization)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.password)
+    </div>
+
+
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.birth_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.birth_date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.address)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.phone)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
